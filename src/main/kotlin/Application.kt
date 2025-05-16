@@ -15,7 +15,7 @@ fun Application.module() {
     configureSerialization()
     configureRouting()
     Database.connect(
-        url = "jdbc:postgresql://localhost:25432/erudite",
+        url = "jdbc:postgresql://erudite_pg:5432/erudite",
         driver = "org.postgresql.Driver",
         user = "admin",
         password = "password"

@@ -1,7 +1,15 @@
 version: "3.8"
 
 services:
-  pg:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"
+    container_name: erudite_api
+
+  erudite_pg:
     image: postgres:latest
     environment:
       POSTGRES_USER: admin
